@@ -4,7 +4,9 @@ Rails.application.routes.draw do
   resources :rooms
   resources :guests, only:[:show, :create:, :update]
 
-  get/'', to: "guests#show_username"
+  get "/username", to: "guests#show_username"
+  get "/guestvisits", to: "visits#guest_visits"
+  
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }
