@@ -6,7 +6,7 @@ class VisitsController < ApplicationController
     end
 
     def guest_visits
-        guest = Guest.find(session[:id])
+        guest = Guest.find(session[:guest_id])
         render json: guest.visits
     end
 
@@ -20,6 +20,12 @@ class VisitsController < ApplicationController
         visit = Visit.find(params[:id])
         visit.destroy
         head :no_content
+    end
+
+    def create 
+        room = Room.find_by(class: params[:class]).first
+        visit = Visit.create(guest: session[:guest_id], room: room.id, check_in: params[:check_in], check_out: params[:check_out])
+        render json: visit
     end
 
     private

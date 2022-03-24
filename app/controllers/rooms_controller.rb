@@ -4,4 +4,5 @@ class RoomsController < ApplicationController
         room = Room.find(params[:id])
         render json: room
     end
+
 end
