@@ -2,8 +2,9 @@ Rails.application.routes.draw do
   
   resources :visits
   resources :rooms
-  resources :guests
- 
+  resources :guests, only:[:show, :create:, :update]
+
+  get "/username", to: "guests#show_username"
   get "/guestvisits", to: "visits#guest_visits"
   
   # Routing logic: fallback requests for React Router.
