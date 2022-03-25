@@ -1,4 +1,5 @@
 class GuestsController < ApplicationController
+    skip_before_action :authorize, only: :create
 
     def show 
         guest = find_guest
