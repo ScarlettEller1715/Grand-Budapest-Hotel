@@ -30,6 +30,6 @@ class VisitsController < ApplicationController
 
     private
     def visit_params
-        params.permit(:check_in, :check_out)
+        params.permit(:check_in, :check_out, :class)
     end
 end
