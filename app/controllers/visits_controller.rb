@@ -23,13 +23,13 @@ class VisitsController < ApplicationController
     end
 
     def create 
-        room = Room.find_by(class: params[:class]).first
+        room = Room.find_by(:room_type: params[:room_type]).first
         visit = Visit.create(guest: session[:guest_id], room: room.id, check_in: params[:check_in], check_out: params[:check_out])
         render json: visit
     end
 
     private
     def visit_params
-        params.permit(:check_in, :check_out, :class)
+        params.permit(:check_in, :check_out, :room_type)
     end
 end

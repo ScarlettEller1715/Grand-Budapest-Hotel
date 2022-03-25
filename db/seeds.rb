@@ -1,11 +1,3 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-
 puts "seeding database"
 
 puts "destroying former seeds"
@@ -47,8 +39,8 @@ r20 = Room.create(number: 45, room_type: "Superior Room", price: 2700)
 r21 = Room.create(number: 51, room_type: "Archduchess Elizabeth Suite", price: 4500)
 
 puts "seeding visits"
-Visit.create(guest_id: g1.id, room_id: r5.id, check_in: "2022-04-02", check_out: "2022-04-05")
-Visit.create(guest_id: g2.id, room_id: r15.id, check_in: "2022-04-22", check_out: "2022-04-26")
-Visit.create(guest_id: g3.id, room_id: r21.id, check_in: "2022-12-26", check_out: "2023-01-04")
+v1 = Visit.create(guest_id: g1.id, room_id: r5.id, check_in: "2022-04-02", check_out: "2022-04-05")
+v2 = Visit.create(guest_id: g2.id, room_id: r15.id, check_in: "2022-04-22", check_out: "2022-04-26")
+v3 = Visit.create(guest_id: g3.id, room_id: r21.id, check_in: "2022-12-26", check_out: "2023-01-04")
 
 puts "all done!"

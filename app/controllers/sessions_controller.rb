@@ -4,7 +4,7 @@ class SessionsController < ApplicationController
     def create 
         guest = Guest.find_by(username: params[:username])
         if user&.authenticate(params[:password])
-            session[guest_id] = guest.id
+            session[:guest_id] = guest.id
             render json: user, status: :created_at
         else 
             render json: { errors: ["Invalid username or password"] }, status: :unauthorized
