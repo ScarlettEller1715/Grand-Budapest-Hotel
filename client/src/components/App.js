@@ -4,6 +4,7 @@ import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Visits from "./Visits";
 import Room from "./Room"; 
 import Guest from "./Guest";
+import Amenities from "./Amenities";
 
 function App() {
 
@@ -12,6 +13,10 @@ function App() {
       <BrowserRouter>
             <div className="App">
                 <Switch>
+
+                 <Route path="/amenities">
+                   <Amenities />
+                 </Route>
 
                 <Route path="/visits">
                     <Visits/>
