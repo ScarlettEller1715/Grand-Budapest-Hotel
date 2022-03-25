@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  
   resources :visits
   resources :rooms
   resources :guests, only:[:show, :create, :update]
