@@ -5,6 +5,7 @@ import Visits from "./Visits";
 import Room from "./Room"; 
 import Guest from "./Guest";
 import Amenities from "./Amenities";
+import Booking from "./Booking";
 
 function App() {
 
@@ -34,6 +35,10 @@ function App() {
 
                 <Route exact path="/">
                     <Home/>
+                </Route>
+
+                <Route path="/booking">
+                  <Booking/>
                 </Route>
 
                 </Switch>
