@@ -8,6 +8,7 @@ function Nav(){
                     <Link to="/visits">visits</Link>
                     <Link to="/guest">guest</Link>
                     <Link to="/rooms">rooms</Link>
+                    <Link to="/amenities">amenities</Link>
         </React.Fragment>
     ); 
 
