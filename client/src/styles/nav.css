@@ -1,0 +1,18 @@
+.navBarContainer{
+    background-color: #FFDFDE;
+    display: flex; 
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.Link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+   
+    font-size: 3vh;
+    padding-left: 2%;
+    color: rgb(177, 108, 124); 
+
+}
