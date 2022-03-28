@@ -1,6 +1,6 @@
 import React, { useState } from "react"; 
 import { Link } from "react-router-dom";
-// import Input from "react-select/dist/declarations/src/components/Input";
+import CreateAccount from "./CreateAccount";
 
 
 function Login({ setUser }){
@@ -30,6 +30,7 @@ function Login({ setUser }){
 
         <React.Fragment>
             <Link to="/">Home</Link>
+        <div>
             <p> Login Here </p>
         <form onSubmit={handleSubmit}>
             <formfield>
@@ -56,6 +57,11 @@ function Login({ setUser }){
                 <button type="submit">Login</button>
             </formfield>
         </form>
+        </div>
+        <div>
+            <h3>Never stayed with us before?</h3>
+            <Link to="/accountcreation">Create an Guest Account</Link>
+        </div>
         </React.Fragment>
     ); 
 
