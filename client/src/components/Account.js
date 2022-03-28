@@ -9,8 +9,6 @@ function Account({ user }){
         return <VisitInfo visit={visit} />
         })
 
-    // console.log(user.visits)
-
     return (
         <React.Fragment>
             <Link to="/">Home</Link>
