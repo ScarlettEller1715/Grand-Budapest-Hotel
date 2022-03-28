@@ -5,6 +5,11 @@ Rails.application.routes.draw do
 
   get "/username", to: "guests#show_username"
   get "/guestvisits", to: "visits#guest_visits"
+  get "/me", to: "guests#show"
+  
+  post "/login", to: "sessions#create"
+
+  delete "/logout", to: "sessions#destroy"
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

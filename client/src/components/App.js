@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Home from "./Home";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Visits from "./Visits";
@@ -9,6 +9,16 @@ import Account from "./Account";
 import Login from "./Login";
 
 function App() {
+
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    fetch("/me").then((r) => {
+      if (r.ok) {
+        r.json().then((guest) => setUser(guest))
+      }
+    })
+  }, []);
 
   return (
     <React.Fragment>
@@ -31,7 +41,7 @@ function App() {
                 </Route>
 
                 <Route path="/account">
-                    <Account/>
+                    {user ? <Account/> : <Login/>}
                 </Route>
 
                 <Route exact path="/">
@@ -39,7 +49,7 @@ function App() {
                 </Route>
 
                 <Route path="/booking">
-                  <Booking/>
+                  {user ? <Booking/> : <Login/>}
                 </Route>
 
                 <Route path="/login">
