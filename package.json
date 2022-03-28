@@ -11,6 +11,7 @@
     "heroku-postbuild": "npm run clean && npm run build && npm run deploy"
   },
   "dependencies": {
-    "react-flatpickr": "^3.10.9"
+    "react-flatpickr": "^3.10.9",
+    "react-select": "^5.2.2"
   }
 }
