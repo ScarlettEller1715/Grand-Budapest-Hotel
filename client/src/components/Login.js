@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 // import Input from "react-select/dist/declarations/src/components/Input";
 
 
-function Login(){
+function Login({ setUser }){
     
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -19,7 +19,7 @@ function Login(){
             body: JSON.stringify({username, password}),
         }).then((r) => {
             if (r.ok) {
-                r.json().then((response) => console.log(response));
+                r.json().then((user) => setUser(user));
             } else {
                 r.json().then((error) => setErrors(error.errors));
             }

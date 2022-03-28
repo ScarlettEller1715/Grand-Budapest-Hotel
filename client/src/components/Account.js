@@ -3,11 +3,21 @@ import Nav from "./Nav";
 import VisitInfo from "./VisitInfo";
 import { Link } from "react-router-dom";
 
-function Account({ user }){
+function Account({ user, setUser }){
 
     const visits = user.visits.map((visit) => {
         return <VisitInfo visit={visit} />
         })
+
+        function handleLogoutClick() {
+            fetch("/logout", {
+                method: "DELETE"
+            }).then((res) => {
+                if (res.ok) {
+                    setUser(null);
+                }
+            })
+        }
 
     return (
         <React.Fragment>
@@ -24,6 +34,7 @@ function Account({ user }){
                 <h3>Your upcoming visits</h3>
                 {visits}
             </div>
+            <button onClick={handleLogoutClick}>Logout</button>
             
         </React.Fragment>
     ); 
