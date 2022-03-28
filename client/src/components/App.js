@@ -3,9 +3,10 @@ import Home from "./Home";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Visits from "./Visits";
 import Room from "./Room"; 
-import Guest from "./Guest";
 import Amenities from "./Amenities";
 import Booking from "./Booking";
+import Account from "./Account";
+import Login from "./Login";
 
 function App() {
 
@@ -29,8 +30,8 @@ function App() {
                     
                 </Route>
 
-                <Route path="/guest">
-                    <Guest/>
+                <Route path="/account">
+                    <Account/>
                 </Route>
 
                 <Route exact path="/">
@@ -39,6 +40,10 @@ function App() {
 
                 <Route path="/booking">
                   <Booking/>
+                </Route>
+
+                <Route path="/login">
+                  <Login/>
                 </Route>
 
                 </Switch>
