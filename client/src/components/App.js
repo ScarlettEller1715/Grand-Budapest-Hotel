@@ -41,7 +41,7 @@ function App() {
                 </Route>
 
                 <Route path="/account">
-                    {user ? <Account/> : <Login/>}
+                    {user ? <Account user={user}/> : <Login/>}
                 </Route>
 
                 <Route exact path="/">
