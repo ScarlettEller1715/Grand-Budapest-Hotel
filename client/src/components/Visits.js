@@ -1,5 +1,4 @@
 import React from "react";
-import Booking from "./Booking";
 import { Link } from "react-router-dom";
 
 function Visits(){
