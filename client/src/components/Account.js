@@ -34,6 +34,7 @@ function Account({ user, setUser }){
 
             <div className="overallInfo">
                 <div className="CustomerInfo">
+                    <h3>Guest Information:</h3>
                     <p>Name: {user.name}</p>
                     <p>Gender: {user.gender}</p>
                     <p>Profession: {user.profession}</p>

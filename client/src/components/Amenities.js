@@ -30,7 +30,7 @@ function Amenities () {
             </div>
             <div class="AmenitiesCard">
                 <img src="https://lwlies.com/wp-content/uploads/2021/02/boy-with-apple.jpg" />
-                <h3>The Gustave H. Art Collection</h3>
+                <h1>The Gustave H. Art Collection</h1>
             </div>
         </React.Fragment>
         
