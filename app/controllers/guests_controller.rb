@@ -27,7 +27,7 @@ class GuestsController < ApplicationController
     private 
 
     def guest_params
-        params.permit(:name, :gender, :profession, :username, :password_confirmation)
+        params.permit(:name, :gender, :profession, :username, :password, :password_confirmation)
     end
 
     def find_guest 

@@ -8,11 +8,29 @@ function CreateAccount() {
     const [profession, setProfession] = useState("");
     const [gender, setGender] = useState("")
 
-    console.log(gender)
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch("/signup", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                name,
+                profession,
+                gender,
+                username,
+                password,
+                password_confirmation: passwordConfirmation,
+            }),
+        }).then((r) => {
+            console.log(r)
+        }).catch((error) => alert(error.errors))
+    }
     
     return (
         <React.Fragment>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <input placeholder="Full Name"
                 type="text"
                 id="name"
@@ -35,9 +53,29 @@ function CreateAccount() {
                     <option value="X">X</option>
                 </select>
                 <input placeholder="Username"
+                type="text"
+                id="username"
+                autoComplete="off"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 />
-
+                <input placeholder="Password"
+                type="password"
+                id="password"
+                autoComplete="off"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                />
+                <input placeholder="Password Confirmation"
+                type="password"
+                id="password_confirmation"
+                autoComplete="off"
+                value={passwordConfirmation}
+                onChange={(e) => setPasswordConfirmation(e.target.value)}
+                />
+                <button onClick={handleSubmit}>Create an Account</button>
             </form>
+
         </React.Fragment>
     )
 };
