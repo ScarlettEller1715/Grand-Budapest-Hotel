@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, useState } from "react";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
 
@@ -6,11 +6,18 @@ import "flatpickr/dist/themes/material_green.css";
 
 function Booking() {
 
+    const [room_type, setRoom_Type] = useState("")
+    const [check_in, setCheck_In] = useState("")
+    const [check_out, setCheck_Out] = useState("")
+
+    console.log(check_in)
+    console.log(check_out)
 
     return (
         <div>
             <h1>Booking Page</h1>
-            <select>
+            <select onChange={(e) => setRoom_Type(e.target.value)}>
+                <option value="">Select Room Class</option>
                 <option value="Deluxe Room">Deluxe Room</option>
                 <option value="Grand Deluxe Room">Grand Deluxe Room</option>
                 <option value="Executive Room">Executive Room</option>
@@ -25,7 +32,7 @@ function Booking() {
                 altFormat: "F j, Y",
                 dateFormat: "Y-m-d",
                 enableTime: true }}
-            onChange={(date) => console.log(date[0])} />
+            onChange={(date) => setCheck_In(date[0])} />
             <p>-</p>
             <Flatpickr 
             data-date-format="Y-m-d"
@@ -35,7 +42,7 @@ function Booking() {
                 altFormat: "F j, Y",
                 dateFormat: "Y-m-d",
                 enableTime: true }}
-            onChange={(date) => console.log(date[0])} />
+            onChange={(date) => setCheck_Out(date[0])} />
         </div>
     );
 }

@@ -11,7 +11,6 @@ class GuestsController < ApplicationController
         render json: guest.username
     end
 
-    #user login 
     def create 
         guest = Guest.create!(guest_params)
         session[:guest_id] = guest.id
