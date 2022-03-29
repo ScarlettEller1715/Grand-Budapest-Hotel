@@ -1,6 +1,8 @@
 import React, { useState } from "react"; 
 import { Link } from "react-router-dom";
 import CreateAccount from "./CreateAccount";
+import { useHistory } from "react-router-dom";
+
 
 
 function Login({ setUser }){
@@ -8,6 +10,8 @@ function Login({ setUser }){
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState([]);
+
+    const history = useHistory();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -19,7 +23,10 @@ function Login({ setUser }){
             body: JSON.stringify({username, password}),
         }).then((r) => {
             if (r.ok) {
-                r.json().then((user) => setUser(user));
+                r.json().then((user) => {
+                    setUser(user)
+                    history.push("/account")
+                });
             } else {
                 r.json().then((error) => setErrors(error.errors));
             }
@@ -60,7 +67,7 @@ function Login({ setUser }){
         </div>
         <div>
             <h3>Never stayed with us before?</h3>
-            <Link to="/accountcreation">Create an Guest Account</Link>
+            <Link to="/accountcreation">Create a Guest Account</Link>
         </div>
         </React.Fragment>
     ); 
