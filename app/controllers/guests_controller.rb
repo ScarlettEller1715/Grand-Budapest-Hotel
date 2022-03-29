@@ -13,7 +13,7 @@ class GuestsController < ApplicationController
 
     #user login 
     def create 
-        guest = Guest.create(guest_params)
+        guest = Guest.create!(guest_params)
         session[:guest_id] = guest.id
         render json: guest, status: :created 
     end
@@ -27,7 +27,7 @@ class GuestsController < ApplicationController
     private 
 
     def guest_params
-        params.permit(:name, :gender, :profession, :username, :password_confirmation)
+        params.permit(:name, :gender, :profession, :username, :password, :password_confirmation)
     end
 
     def find_guest 

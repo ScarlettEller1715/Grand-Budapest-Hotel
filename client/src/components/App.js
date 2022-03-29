@@ -7,6 +7,7 @@ import Amenities from "./Amenities";
 import Booking from "./Booking";
 import Account from "./Account";
 import Login from "./Login";
+import CreateAccount from "./CreateAccount";
 
 function App() {
 
@@ -53,7 +54,11 @@ function App() {
                 </Route>
 
                 <Route path="/login">
-                  <Login setUser={setUser}/>
+                  {user ? <Account user={user} setUser={setUser} /> : <Login setUser={setUser}/>}
+                </Route>
+
+                <Route path="/accountcreation">
+                  <CreateAccount setUser={setUser}/>
                 </Route>
 
                 </Switch>
