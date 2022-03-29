@@ -8,6 +8,7 @@ import Booking from "./Booking";
 import Account from "./Account";
 import Login from "./Login";
 import CreateAccount from "./CreateAccount";
+import VisitUpdate from "./VisitUpdate";
 
 function App() {
 
@@ -59,6 +60,10 @@ function App() {
 
                 <Route path="/accountcreation">
                   <CreateAccount setUser={setUser}/>
+                </Route>
+
+                <Route path="/bookingupdate">
+                  <VisitUpdate />
                 </Route>
 
                 </Switch>

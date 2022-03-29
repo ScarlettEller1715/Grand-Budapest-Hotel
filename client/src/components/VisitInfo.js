@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useHistory } from "react-router-dom";
+import { useHistory, Link } from "react-router-dom";
 
 
 function VisitInfo({ visit }) {
@@ -29,7 +29,8 @@ function VisitInfo({ visit }) {
                 <h3>{visit.room.room_type}</h3>
                 <li>Room number: {visit.room.number}</li>
                 <li>Price per night: {visit.room.price}</li>
-                <button onClick={handleDelete}>Cancel this visit</button>
+                <button onClick={handleDelete}>Cancel this Booking</button>
+                <Link to="/bookingupdate">Adjust this Booking</Link>
             </div>
     )
 }
