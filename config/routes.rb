@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   post "/booking", to: "visits#create"
   
   delete "/logout", to: "sessions#destroy"
+  delete "/cancellation/:id", to: "visits#destroy"
   
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!

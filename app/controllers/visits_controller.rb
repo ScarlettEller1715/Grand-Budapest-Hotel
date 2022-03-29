@@ -12,7 +12,10 @@ class VisitsController < ApplicationController
 
     def update
         visit = Visit.find(params[:id])
+        room = Room.find_by(room_type: params[:room_type])
+
         visit.update(visit_params)
+        visit.update(:room_id => room.id)
         render json: visit
     end
 
