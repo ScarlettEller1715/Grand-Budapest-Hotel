@@ -1,4 +1,5 @@
 import React, { Component, useState } from "react";
+import { useHistory } from "react-router-dom";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
 
@@ -10,11 +11,32 @@ function Booking() {
     const [check_in, setCheck_In] = useState("")
     const [check_out, setCheck_Out] = useState("")
 
-    console.log(check_in)
-    console.log(check_out)
+    const history = useHistory();
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        fetch("/booking", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                room_type,
+                check_in,
+                check_out
+            }),
+        }).then((r) => {
+            if (r.ok) {
+                r.json().then((visit) => {
+                    console.log(visit)
+                    history.push("/account")})
+            } else {
+                r.json().then((e) => alert(e.errors))
+            }})
+    }
 
     return (
-        <div>
+        <form>
             <h1>Booking Page</h1>
             <select onChange={(e) => setRoom_Type(e.target.value)}>
                 <option value="">Select Room Class</option>
@@ -43,7 +65,8 @@ function Booking() {
                 dateFormat: "Y-m-d",
                 enableTime: true }}
             onChange={(date) => setCheck_Out(date[0])} />
-        </div>
+            <button onClick={handleSubmit}>Book your trip!</button>
+        </form>
     );
 }
 
