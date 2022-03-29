@@ -13,7 +13,7 @@ function VisitUpdate() {
     const rawVisit = location.state
     const visit = rawVisit.visit
 
-    console.log(visit)
+    console.log(visit.id)
 
     return (
         <form>
@@ -26,7 +26,8 @@ function VisitUpdate() {
             <option value="Superior Room">Superior Room</option>
             <option value="Archduchess Elizabeth Suite">Archduchess Elizabeth Suite</option>
         </select>
-        <Flatpickr 
+        <Flatpickr
+        value={visit.check_in}
         data-date-format="Y-m-d"
         placeholder="Check-in"
         options={{ minDate: "today",
@@ -36,7 +37,8 @@ function VisitUpdate() {
             enableTime: true }}
         onChange={(date) => setCheck_In(date[0])} />
         <p>-</p>
-        <Flatpickr 
+        <Flatpickr
+        value={visit.check_out} 
         data-date-format="Y-m-d"
         placeholder="Check-out"
         options={{ minDate: "today",
