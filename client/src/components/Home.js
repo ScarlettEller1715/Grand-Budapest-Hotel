@@ -15,6 +15,7 @@ function Home(){
                 {/* <img src="https://assets1.ignimgs.com/2014/03/04/gbh0303141280jpg-df102f_160w.jpg?width=2280"/> */}
                 {/* <img src="../images/grandBudapest.png"/> */}
                 <img src="https://product-image.juniqe-production.juniqe.com/media/catalog/product/seo-cache/x800/574/27/574-27-101L/The-Grand-Budapest-Hotel-Pink-Mat-Voyce-Poster.jpg"/>
+
                 </div>
             </div>
 
