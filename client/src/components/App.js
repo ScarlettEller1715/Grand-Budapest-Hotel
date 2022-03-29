@@ -58,7 +58,7 @@ function App() {
                 </Route>
 
                 <Route path="/accountcreation">
-                  <CreateAccount/>
+                  <CreateAccount setUser={setUser}/>
                 </Route>
 
                 </Switch>

@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 
-function CreateAccount() {
+function CreateAccount({ setUser }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [passwordConfirmation, setPasswordConfirmation] = useState("");
     const [name, setName] = useState("");
     const [profession, setProfession] = useState("");
     const [gender, setGender] = useState("")
+
+    const history = useHistory();
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -23,9 +26,14 @@ function CreateAccount() {
                 password,
                 password_confirmation: passwordConfirmation,
             }),
-        }).then((r) => {
-            console.log(r)
-        }).catch((error) => alert(error.errors))
+        }).then((r) => { 
+            if (r.ok) {
+                r.json().then((user) => {setUser(user)
+                history.push("/visits")})
+            } else {
+                r.json().then((e) => alert(e.errors))
+            }
+        })
     }
     
     return (
