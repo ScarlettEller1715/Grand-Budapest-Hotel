@@ -9,7 +9,6 @@ function Login({ setUser }){
     
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [errors, setErrors] = useState([]);
 
     const history = useHistory();
 
@@ -28,7 +27,7 @@ function Login({ setUser }){
                     history.push("/account")
                 });
             } else {
-                r.json().then((error) => setErrors(error.errors));
+                r.json().then((error) => alert(error.errors));
             }
         });
     }
