@@ -1,0 +1,39 @@
+
+.AmenitiesCard{
+    /* border: 5px solid red; */
+    display: flex;
+    margin: 20px;
+}
+
+.AmenitiesCard:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.AmenitiesCard img{
+    padding: 1px; 
+    width: 50%;
+    height: 50%;
+    border: 90px solid transparent;
+    border-image: url(../images/frame.png) 50 stretch;
+}
+
+.AmenitiesCard p{
+    padding: 1%;
+    font-size: 9vh;
+    font-size: 8vh;
+    align-items: flex-end;
+    color: rgb(243, 243, 243);
+    font-weight: 100;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px; 
+    padding: 40px;
+    color: white;
+}
+
+
+
+

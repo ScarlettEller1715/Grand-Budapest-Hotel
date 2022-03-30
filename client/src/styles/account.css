@@ -56,12 +56,15 @@ p{
     align-items: center;
     /* justify-content: center; */
     border: 2px solid rgb(218, 194, 204);
-    background-color: rgb(232, 208, 217);
+    border-radius: 30px;
+    /* background-color: rgb(232, 208, 217); */
     color: rgb(255, 255, 255);
+    margin: 20px;
 }
 
 .VisitContainer{
     border: 2px solid rgb(221, 193, 204);
+    border-radius: 30px;
     background-color: rgb(231, 173, 187);
     color: rgb(255, 255, 255);
     display: flex;
