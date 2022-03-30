@@ -18,6 +18,9 @@ function VisitUpdate() {
     console.log(room_type ? "here!" : "not!")
 
     function handleSubmit(e) {
+        const updatedRoom = (room_type ? room_type : visit.room.room_type)
+        const updatedCheck_In = (check_in ? check_in : visit.check_in)
+        const updatedCheck_Out = (check_out ? check_out : visit.check_out)
 
         e.preventDefault();
         fetch(`/bookingupdate/${visit.id}`, {
@@ -26,9 +29,9 @@ function VisitUpdate() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                check_in,
-                check_out,
-                room_type
+                check_in: updatedCheck_Out,
+                check_out: updatedCheck_In,
+                room_type: updatedRoom
             }),
         }).then((r) => {
             if (r.ok) {
