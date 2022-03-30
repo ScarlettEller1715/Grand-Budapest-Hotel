@@ -14,8 +14,8 @@ class VisitsController < ApplicationController
         visit = Visit.find(params[:id])
         room = Room.find_by(room_type: params[:room_type])
 
-        visit.update(visit_params)
-        visit.update(:room_id => room.id)
+        visit.update!(guest_id: session[:guest_id], room_id: room.id, check_in: params[:check_in], check_out: params[:check_out])
+        visit.update!(:room_id => room.id)
         render json: visit
     end
 
@@ -33,6 +33,6 @@ class VisitsController < ApplicationController
 
     private
     def visit_params
-        params.permit(:check_in, :check_out, :room_type)
+        params.permit(:check_in, :check_out, :id)
     end
 end

@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { useLocation } from "react-router-dom"
+import React, { useState, useEffect } from "react";
+import { useLocation, useHistory } from "react-router-dom"
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
 
@@ -9,16 +9,42 @@ function VisitUpdate() {
     const [check_in, setCheck_In] = useState("")
     const [check_out, setCheck_Out] = useState("")
 
+    const history = useHistory();
+
     const location = useLocation();
     const rawVisit = location.state
     const visit = rawVisit.visit
 
-    console.log(visit.id)
+    console.log(room_type ? "here!" : "not!")
+
+    function handleSubmit(e) {
+
+        e.preventDefault();
+        fetch(`/bookingupdate/${visit.id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                check_in,
+                check_out,
+                room_type
+            }),
+        }).then((r) => {
+            if (r.ok) {
+                r.json().then((visit) => {
+                    console.log(visit)
+                    history.push("/account")
+                    window.location.reload(true)})
+            } else {
+                r.json().then((e) => alert(e.errors))
+            }})
+    }
 
     return (
         <form>
         <h1>Adjust your booking...</h1>
-        <select onChange={(e) => setRoom_Type(e.target.value)} value={visit.room.room_type}>
+        <select onChange={(e) => setRoom_Type(e.target.value)} defaultValue={visit.room.room_type} >
             <option value="">Select Room Class</option>
             <option value="Deluxe Room">Deluxe Room</option>
             <option value="Grand Deluxe Room">Grand Deluxe Room</option>
@@ -27,7 +53,7 @@ function VisitUpdate() {
             <option value="Archduchess Elizabeth Suite">Archduchess Elizabeth Suite</option>
         </select>
         <Flatpickr
-        value={visit.check_in}
+        defaultValue={visit.check_in}
         data-date-format="Y-m-d"
         placeholder="Check-in"
         options={{ minDate: "today",
@@ -38,7 +64,7 @@ function VisitUpdate() {
         onChange={(date) => setCheck_In(date[0])} />
         <p>-</p>
         <Flatpickr
-        value={visit.check_out} 
+        defaultValue={visit.check_out} 
         data-date-format="Y-m-d"
         placeholder="Check-out"
         options={{ minDate: "today",
@@ -47,7 +73,7 @@ function VisitUpdate() {
             dateFormat: "Y-m-d",
             enableTime: true }}
         onChange={(date) => setCheck_Out(date[0])} />
-        <button>Adjust booking</button>
+        <button onClick={handleSubmit}>Adjust booking</button>
     </form>
     )
 }
