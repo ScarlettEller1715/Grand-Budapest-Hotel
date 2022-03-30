@@ -3,7 +3,7 @@ import { useLocation, useHistory } from "react-router-dom"
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
 
-function VisitUpdate() {
+function VisitUpdate({ updateVisit }) {
 
     const [room_type, setRoom_Type] = useState("")
     const [check_in, setCheck_In] = useState("")
@@ -34,8 +34,8 @@ function VisitUpdate() {
         }).then((r) => {
             if (r.ok) {
                 r.json().then((visit) => {
+                    updateVisit(visit)
                     history.push("/account")
-                    window.location.reload(true)
                     })
             } else {
                 r.json().then((e) => alert(e.errors))

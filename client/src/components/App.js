@@ -12,14 +12,50 @@ import VisitUpdate from "./VisitUpdate";
 function App() {
 
   const [user, setUser] = useState(null);
+  const [userVisits, setUserVisits] = useState([])
 
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((guest) => setUser(guest))
+        r.json().then((guest) => {
+          setUser(guest)
+          setUserVisits(guest.visits)
+        })
       }
     })
   }, []);
+
+  function addNewVisit(newVisit) {
+    setUserVisits([
+      ...userVisits,
+      newVisit
+    ])
+  }
+
+  function deleteVisit(id) {
+    const updatedData = userVisits.filter((visit) => {
+      if (visit.id === id) {
+        return null
+      } else {
+        return visit
+      }
+    })
+    setUserVisits(updatedData)
+  }
+
+  function updateVisit(adjustedVisit) {
+    console.log(adjustedVisit)
+    const updatedVisits = userVisits.map((visit) => {
+      if (visit.id === adjustedVisit.id) {
+         console.log(adjustedVisit)
+        return adjustedVisit;
+      } else {
+        return visit;
+      }
+    });
+    console.log(updatedVisits)
+    setUserVisits(updatedVisits)
+  }
 
   return (
     <React.Fragment>
@@ -37,7 +73,10 @@ function App() {
                 </Route>
 
                 <Route path="/account">
-                    {user ? <Account user={user} setUser={setUser}/> : <Login setUser={setUser}/>}
+                    {user ? <Account user={user} 
+                                     setUser={setUser} 
+                                     userVisits={userVisits}
+                                     deleteVisit={deleteVisit}/> : <Login setUser={setUser}/>}
                 </Route>
 
                 <Route exact path="/">
@@ -45,7 +84,7 @@ function App() {
                 </Route>
 
                 <Route path="/booking">
-                  {user ? <Booking/> : <Login setUser={setUser}/>}
+                  {user ? <Booking addNewVisit={addNewVisit}/> : <Login setUser={setUser}/>}
                 </Route>
 
                 <Route path="/login">
@@ -57,7 +96,7 @@ function App() {
                 </Route>
 
                 <Route path="/bookingupdate">
-                  <VisitUpdate />
+                  <VisitUpdate updateVisit={updateVisit}/>
                 </Route>
 
                 </Switch>

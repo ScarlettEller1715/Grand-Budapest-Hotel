@@ -5,7 +5,7 @@ import "flatpickr/dist/themes/material_green.css";
 
 
 
-function Booking() {
+function Booking({ addNewVisit }) {
 
     const [room_type, setRoom_Type] = useState("")
     const [check_in, setCheck_In] = useState("")
@@ -28,9 +28,9 @@ function Booking() {
         }).then((r) => {
             if (r.ok) {
                 r.json().then((visit) => {
-                    console.log(visit)
+                    addNewVisit(visit)
                     history.push("/account")
-                    window.location.reload(true)})
+                    })
             } else {
                 r.json().then((e) => alert(e.errors))
             }})
