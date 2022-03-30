@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Home from "./Home";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Visits from "./Visits";
-import Room from "./Room"; 
 import Amenities from "./Amenities";
 import Booking from "./Booking";
 import Account from "./Account";
@@ -34,11 +33,6 @@ function App() {
 
                 <Route path="/visits">
                     <Visits user={user}/>
-                    
-                </Route>
-
-                <Route path="/rooms">
-                    <Room/>
                     
                 </Route>
 
