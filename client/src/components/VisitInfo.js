@@ -1,11 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useHistory, Link } from "react-router-dom";
+
 
 function VisitInfo({ visit }) {
     
     const checkIn = { time: visit.check_in }
     const checkOut = { time: visit.check_out }
+
+    const history = useHistory();
+
     
-    console.log(new Date(checkOut.time).toLocaleString())
+    function handleDelete() {
+        fetch(`/cancellation/${visit.id}`, {
+            method: "DELETE",
+        }).then((res) => {
+            console.log(res.json())
+            window.location.reload(true)
+            history.push('/account')
+        })
+    }
 
     
     return (<div className="VisitInfo">
@@ -16,6 +29,11 @@ function VisitInfo({ visit }) {
                 <h3>{visit.room.room_type}</h3>
                 <li>Room number: {visit.room.number}</li>
                 <li>Price per night: {visit.room.price}</li>
+                <button onClick={handleDelete}>Cancel this Booking</button>
+                <Link to={{
+                    pathname: "/bookingupdate", 
+                    state: { visit: visit }
+                }}>Adjust this Booking</Link>
             </div>
     )
 }

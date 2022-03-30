@@ -29,7 +29,8 @@ function Booking() {
             if (r.ok) {
                 r.json().then((visit) => {
                     console.log(visit)
-                    history.push("/account")})
+                    history.push("/account")
+                    window.location.reload(true)})
             } else {
                 r.json().then((e) => alert(e.errors))
             }})
