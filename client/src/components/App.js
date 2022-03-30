@@ -26,7 +26,6 @@ function App() {
   }, []);
 
   function addNewVisit(newVisit) {
-    console.log(newVisit)
     setUserVisits([
       ...userVisits,
       newVisit
@@ -45,13 +44,16 @@ function App() {
   }
 
   function updateVisit(adjustedVisit) {
-    const updatedVisits = userVisits.filter((visit) => {
+    console.log(adjustedVisit)
+    const updatedVisits = userVisits.map((visit) => {
       if (visit.id === adjustedVisit.id) {
+         console.log(adjustedVisit)
         return adjustedVisit;
       } else {
         return visit;
       }
     });
+    console.log(updatedVisits)
     setUserVisits(updatedVisits)
   }
 

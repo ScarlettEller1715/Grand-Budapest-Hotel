@@ -6,8 +6,6 @@ import "../styles/account.css";
 
 function Account({ user, setUser, userVisits, deleteVisit }){
 
-    console.log(userVisits)
-
     const visits = userVisits.map((visit) => {
         return <VisitInfo visit={visit}  deleteVisit={deleteVisit}/>
         })
