@@ -1,0 +1,32 @@
+
+.AmenitiesCard{
+    /* border: 5px solid red; */
+    display: flex;
+    margin: 20px;
+}
+
+.AmenitiesCard:nth-child(even){
+    /* border: 10px solid yellow; */
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.AmenitiesCard img{
+    padding: 1px; 
+    width: 50%;
+    height: 50%;
+    border: 90px solid transparent;
+    /* border-image: url("https://o.remove.bg/downloads/a35c1582-d26b-4e59-b17f-5d0682fcb60d/lBH3XSUJyS0FRmM-Gold-Antique-Frame-Transparent-PNG-removebg-preview.png") 50 stretch; */
+    border-image: url(../images/frame.png) 50 stretch;
+}
+
+h2{
+    text-align: center;
+    font-size: 40px; 
+    padding: 40px;
+    color: white;
+}
+
+
+
+
