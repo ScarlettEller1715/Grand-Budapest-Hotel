@@ -32,6 +32,17 @@ function App() {
     ])
   }
 
+  function deleteVisit(id) {
+    const updatedData = userVisits.filter((visit) => {
+      if (visit.id === id) {
+        return null
+      } else {
+        return visit
+      }
+    })
+    setUserVisits(updatedData)
+  }
+
   return (
     <React.Fragment>
       <BrowserRouter>
@@ -48,7 +59,10 @@ function App() {
                 </Route>
 
                 <Route path="/account">
-                    {user ? <Account user={user} setUser={setUser}/> : <Login setUser={setUser}/>}
+                    {user ? <Account user={user} 
+                                     setUser={setUser} 
+                                     userVisits={userVisits}
+                                     deleteVisit={deleteVisit}/> : <Login setUser={setUser}/>}
                 </Route>
 
                 <Route exact path="/">

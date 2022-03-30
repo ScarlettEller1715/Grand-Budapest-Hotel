@@ -4,10 +4,12 @@ import VisitInfo from "./VisitInfo";
 import { Link } from "react-router-dom";
 import "../styles/account.css";
 
-function Account({ user, setUser }){
+function Account({ user, setUser, userVisits, deleteVisit }){
 
-    const visits = user.visits.map((visit) => {
-        return <VisitInfo visit={visit} />
+    console.log(userVisits)
+
+    const visits = userVisits.map((visit) => {
+        return <VisitInfo visit={visit}  deleteVisit={deleteVisit}/>
         })
 
         function handleLogoutClick() {
