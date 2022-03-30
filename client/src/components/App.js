@@ -12,14 +12,25 @@ import VisitUpdate from "./VisitUpdate";
 function App() {
 
   const [user, setUser] = useState(null);
+  const [userVisits, setUserVisits] = useState([])
 
   useEffect(() => {
     fetch("/me").then((r) => {
       if (r.ok) {
-        r.json().then((guest) => setUser(guest))
+        r.json().then((guest) => {
+          setUser(guest)
+          setUserVisits(guest.visits)
+        })
       }
     })
   }, []);
+
+  function addNewVisit(newVisit) {
+    setUserVisits([
+      ...userVisits,
+      newVisit
+    ])
+  }
 
   return (
     <React.Fragment>
@@ -45,7 +56,7 @@ function App() {
                 </Route>
 
                 <Route path="/booking">
-                  {user ? <Booking/> : <Login setUser={setUser}/>}
+                  {user ? <Booking addNewVisit={addNewVisit}/> : <Login setUser={setUser}/>}
                 </Route>
 
                 <Route path="/login">
