@@ -24,19 +24,6 @@ Rails.application.routes.draw do
   delete "/logout", to: "sessions#destroy"
   
   
-  # get "/username", to: "guests#show_username"
-  # get "/guestvisits", to: "visits#guest_visits"
-  # get "/me", to: "guests#show"
-  
-  # post "/login", to: "sessions#create"
-  # post "/signup", to: "guests#create"
-  # post "/booking", to: "visits#create"
-
-  # patch "/bookingupdate/:id", to: "visits#update"
-  
-  # delete "/logout", to: "sessions#destroy"
-  # delete "/cancellation/:id", to: "visits#destroy"
-  
   # Routing logic: fallback requests for React Router.
   # Leave this here to help deploy your app later!
   get "*path", to: "fallback#index", constraints: ->(req) { !req.xhr? && req.format.html? }

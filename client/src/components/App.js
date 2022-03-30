@@ -26,6 +26,7 @@ function App() {
   }, []);
 
   function addNewVisit(newVisit) {
+    console.log(newVisit)
     setUserVisits([
       ...userVisits,
       newVisit
@@ -41,6 +42,17 @@ function App() {
       }
     })
     setUserVisits(updatedData)
+  }
+
+  function updateVisit(adjustedVisit) {
+    const updatedVisits = userVisits.filter((visit) => {
+      if (visit.id === adjustedVisit.id) {
+        return adjustedVisit;
+      } else {
+        return visit;
+      }
+    });
+    setUserVisits(updatedVisits)
   }
 
   return (
@@ -82,7 +94,7 @@ function App() {
                 </Route>
 
                 <Route path="/bookingupdate">
-                  <VisitUpdate />
+                  <VisitUpdate updateVisit={updateVisit}/>
                 </Route>
 
                 </Switch>

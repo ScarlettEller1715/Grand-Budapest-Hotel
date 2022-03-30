@@ -1,3 +1,3 @@
 class RoomSerializer < ActiveModel::Serializer
-  attributes :id, :number, :class, :price
+  attributes :id, :number, :room_type, :price
 end

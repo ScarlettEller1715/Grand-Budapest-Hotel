@@ -27,7 +27,8 @@ class VisitsController < ApplicationController
 
     def create 
         room = Room.find_by(room_type: params[:room_type])
-        visit = Visit.create!(guest_id: session[:guest_id], room_id: room.id, check_in: params[:check_in], check_out: params[:check_out])
+        added_visit = Visit.create!(guest_id: session[:guest_id], room_id: room.id, check_in: params[:check_in], check_out: params[:check_out])
+        visit = Visit.last
         render json: visit
     end
 

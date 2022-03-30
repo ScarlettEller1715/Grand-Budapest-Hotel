@@ -19,6 +19,8 @@ function VisitInfo({ visit, deleteVisit }) {
         })
     }
 
+    console.log(visit.room.room_type)
+
     
     return (<div className="VisitInfo">
                 <h3>{new Date(checkIn.time).toLocaleDateString()}</h3>
