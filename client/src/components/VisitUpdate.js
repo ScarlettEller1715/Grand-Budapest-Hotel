@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useLocation, useHistory } from "react-router-dom"
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
@@ -14,8 +14,6 @@ function VisitUpdate() {
     const location = useLocation();
     const rawVisit = location.state
     const visit = rawVisit.visit
-
-    console.log(room_type ? "here!" : "not!")
 
     function handleSubmit(e) {
         const updatedRoom = (room_type ? room_type : visit.room.room_type)
@@ -76,7 +74,7 @@ function VisitUpdate() {
             dateFormat: "Y-m-d",
             enableTime: true }}
         onChange={(date) => setCheck_Out(date[0])} />
-        <button onClick={handleSubmit}>Adjust booking</button>
+        <button onClick={handleSubmit}>Adjust Booking</button>
     </form>
     )
 }

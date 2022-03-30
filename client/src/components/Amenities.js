@@ -4,11 +4,11 @@ import "../styles/amenities.css";
 
 
 
-function Amenities () {
+function Amenities ({ user }) {
 
     return (
         <React.Fragment>
-            <Nav />
+            <Nav user={user}/>
             <h1 id="amenitiesHeader">Our Amenities</h1>
             <div class="AmenitiesCard">
                 <img src="http://4.bp.blogspot.com/-yyMgdDGVvPw/U19D7wmieZI/AAAAAAAAIfs/GNiyWbSzNi8/s1600/GrandBudapest.jpg"/>

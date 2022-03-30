@@ -29,11 +29,11 @@ function App() {
                 <Switch>
 
                  <Route path="/amenities">
-                   <Amenities />
+                   <Amenities user={user}/>
                  </Route>
 
                 <Route path="/visits">
-                    <Visits/>
+                    <Visits user={user}/>
                     
                 </Route>
 
@@ -47,7 +47,7 @@ function App() {
                 </Route>
 
                 <Route exact path="/">
-                    <Home/>
+                    <Home user={user}/>
                 </Route>
 
                 <Route path="/booking">
