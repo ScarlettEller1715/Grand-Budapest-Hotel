@@ -6,7 +6,6 @@
 }
 
 .AmenitiesCard:nth-child(even){
-    /* border: 10px solid yellow; */
     display: flex;
     flex-direction: row-reverse;
 }
@@ -16,8 +15,16 @@
     width: 50%;
     height: 50%;
     border: 90px solid transparent;
-    /* border-image: url("https://o.remove.bg/downloads/a35c1582-d26b-4e59-b17f-5d0682fcb60d/lBH3XSUJyS0FRmM-Gold-Antique-Frame-Transparent-PNG-removebg-preview.png") 50 stretch; */
     border-image: url(../images/frame.png) 50 stretch;
+}
+
+.AmenitiesCard p{
+    padding: 1%;
+    font-size: 9vh;
+    font-size: 8vh;
+    align-items: flex-end;
+    color: rgb(243, 243, 243);
+    font-weight: 100;
 }
 
 h2{
