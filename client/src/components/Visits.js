@@ -2,10 +2,10 @@ import React from "react";
 import Nav from "./Nav"
 import { Link } from "react-router-dom";
 
-function Visits(){
+function Visits({ user }){
     return (
         <React.Fragment>
-            <Nav />
+            <Nav user={user}/>
             <div>
                 <h1> Our Accomodations - </h1>
                 <p>Descrption paragraph to come</p>

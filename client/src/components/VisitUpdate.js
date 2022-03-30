@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useLocation, useHistory } from "react-router-dom"
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
@@ -15,8 +15,6 @@ function VisitUpdate() {
     const rawVisit = location.state
     const visit = rawVisit.visit
 
-    console.log(room_type ? "here!" : "not!")
-
     function handleSubmit(e) {
         const updatedRoom = (room_type ? room_type : visit.room.room_type)
         const updatedCheck_In = (check_in ? check_in : visit.check_in)
@@ -29,16 +27,16 @@ function VisitUpdate() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                check_in: updatedCheck_Out,
-                check_out: updatedCheck_In,
+                check_in: updatedCheck_In,
+                check_out: updatedCheck_Out,
                 room_type: updatedRoom
             }),
         }).then((r) => {
             if (r.ok) {
                 r.json().then((visit) => {
-                    console.log(visit)
                     history.push("/account")
-                    window.location.reload(true)})
+                    window.location.reload(true)
+                    })
             } else {
                 r.json().then((e) => alert(e.errors))
             }})
@@ -76,7 +74,7 @@ function VisitUpdate() {
             dateFormat: "Y-m-d",
             enableTime: true }}
         onChange={(date) => setCheck_Out(date[0])} />
-        <button onClick={handleSubmit}>Adjust booking</button>
+        <button onClick={handleSubmit}>Adjust Booking</button>
     </form>
     )
 }

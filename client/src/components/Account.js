@@ -23,7 +23,7 @@ function Account({ user, setUser }){
     return (
         <React.Fragment>
             <Link to="/">Home</Link>
-            <Nav/>
+            <Nav user={user}/>
 
             {/* <div className="portraitContainer">
             <img className="portrait"src="https://www.yimmaukun.com/wp-content/uploads/2019/06/125_%E7%B6%A0%E8%A1%A3%E5%A5%B3%E5%AD%9060.5x50cm2003%E8%89%B2%E6%A8%99.jpg"/>

@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import Home from "./Home";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Visits from "./Visits";
-import Room from "./Room"; 
 import Amenities from "./Amenities";
 import Booking from "./Booking";
 import Account from "./Account";
@@ -29,16 +28,11 @@ function App() {
                 <Switch>
 
                  <Route path="/amenities">
-                   <Amenities />
+                   <Amenities user={user}/>
                  </Route>
 
                 <Route path="/visits">
-                    <Visits/>
-                    
-                </Route>
-
-                <Route path="/rooms">
-                    <Room/>
+                    <Visits user={user}/>
                     
                 </Route>
 
@@ -47,7 +41,7 @@ function App() {
                 </Route>
 
                 <Route exact path="/">
-                    <Home/>
+                    <Home user={user}/>
                 </Route>
 
                 <Route path="/booking">
