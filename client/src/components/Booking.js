@@ -1,5 +1,5 @@
-import React, { Component, useState } from "react";
-import { useHistory } from "react-router-dom";
+import React, { useState } from "react";
+import { useHistory, useLocation } from "react-router-dom";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
 
@@ -13,7 +13,13 @@ function Booking({ addNewVisit }) {
 
     const history = useHistory();
 
+    const location = useLocation();
+    const rawRoom = location.state
+    const propsRoom = rawRoom.room_type
+
     function handleSubmit(e) {
+        const createdRoom = (room_type ? room_type : propsRoom)
+        
         e.preventDefault();
         fetch("/booking", {
             method: "POST",
@@ -21,7 +27,7 @@ function Booking({ addNewVisit }) {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                room_type,
+                room_type: createdRoom,
                 check_in,
                 check_out
             }),
@@ -39,7 +45,7 @@ function Booking({ addNewVisit }) {
     return (
         <form>
             <h1>Booking Page</h1>
-            <select onChange={(e) => setRoom_Type(e.target.value)}>
+            <select onChange={(e) => setRoom_Type(e.target.value)} defaultValue={propsRoom}>
                 <option value="">Select Room Class</option>
                 <option value="Deluxe Room">Deluxe Room</option>
                 <option value="Grand Deluxe Room">Grand Deluxe Room</option>

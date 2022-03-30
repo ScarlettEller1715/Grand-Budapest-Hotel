@@ -13,29 +13,48 @@ function Visits({ user }){
             <div>
                 <h2>The Deluxe Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Deluxe Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Grand Deluxe Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Grand Deluxe Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Executive Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Executive Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Superior Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Superior Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Archduchess Elizabeth Suite</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Archduchess Elizabeth Suite" }}}>
+                    Book Now
+                </Link>
             </div>
-            <Link to="/">Home</Link>
         </React.Fragment>
     ); 
 }

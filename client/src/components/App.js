@@ -44,16 +44,13 @@ function App() {
   }
 
   function updateVisit(adjustedVisit) {
-    console.log(adjustedVisit)
     const updatedVisits = userVisits.map((visit) => {
       if (visit.id === adjustedVisit.id) {
-         console.log(adjustedVisit)
         return adjustedVisit;
       } else {
         return visit;
       }
     });
-    console.log(updatedVisits)
     setUserVisits(updatedVisits)
   }
 
