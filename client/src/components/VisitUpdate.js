@@ -27,16 +27,16 @@ function VisitUpdate() {
                 "Content-Type": "application/json",
             },
             body: JSON.stringify({
-                check_in: updatedCheck_Out,
-                check_out: updatedCheck_In,
+                check_in: updatedCheck_In,
+                check_out: updatedCheck_Out,
                 room_type: updatedRoom
             }),
         }).then((r) => {
             if (r.ok) {
                 r.json().then((visit) => {
-                    console.log(visit)
                     history.push("/account")
-                    window.location.reload(true)})
+                    window.location.reload(true)
+                    })
             } else {
                 r.json().then((e) => alert(e.errors))
             }})
