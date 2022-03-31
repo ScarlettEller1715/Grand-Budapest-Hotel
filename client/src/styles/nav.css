@@ -4,6 +4,8 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
+    margin: 1%;
+    
 }
 
 .Link{
@@ -13,6 +15,6 @@
    
     font-size: 3vh;
     padding-left: 2%;
+    margin: 1%;
     color: rgb(177, 108, 124); 
-
 }

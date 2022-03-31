@@ -1,11 +1,10 @@
-
 .AmenitiesCard{
-    /* border: 5px solid red; */
     display: flex;
     margin: 20px;
 }
 
-.AmenitiesCard:nth-child(even){
+
+.AmenitiesCard:nth-child(odd){
     display: flex;
     flex-direction: row-reverse;
 }
@@ -16,6 +15,7 @@
     height: 50%;
     border: 90px solid transparent;
     border-image: url(../images/frame.png) 50 stretch;
+    filter: drop-shadow(0 0 1.5rem #a086c0);
 }
 
 .AmenitiesCard p{
@@ -23,15 +23,29 @@
     font-size: 9vh;
     font-size: 8vh;
     align-items: flex-end;
-    color: rgb(243, 243, 243);
+    color: #dac291;
     font-weight: 100;
 }
 
-h2{
+.amenitiesSubHeader{
     text-align: center;
-    font-size: 40px; 
-    padding: 40px;
+    font-size: 60px; 
     color: white;
+    margin: 0px;
+}
+
+.amenitiesInfoCard{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(255, 255, 255, 0.808);
+    justify-content: center;
+    padding: 30px; 
+}
+
+.amenitiesInfoCard p {
+    padding: 0px;
+    margin: 0px;
+    text-align: center;
 }
 
 
