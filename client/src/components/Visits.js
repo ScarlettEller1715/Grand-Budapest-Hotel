@@ -13,31 +13,35 @@ function Visits({ user }){
             </div>
             <div class="roomCard">
                 <div class="visitTextBox">
-                    <h2>The Deluxe Room</h2>
+                    <h2 class="cardTitle">The Deluxe Room</h2>
+                    <div class="cardSubtext">
                     <p>Descrption paragraph to come</p>
-                    <Link to={{
-                        pathname: "/booking", 
-                        state: { room_type: "Deluxe Room" }}}>
-                        Book Now
-                    </Link>
+                        <Link to={{
+                            pathname: "/booking", 
+                            state: { room_type: "Deluxe Room" }}}>
+                            Book Now
+                        </Link>
+                    </div>
                 </div>
                 <img class="visitImage" src="https://www.pendrayinnandteahouse.com/uploads/1/0/6/8/106825145/garden-suite-2_1_orig.jpg"/>
             </div>
             <div class="roomCard">
                 <div class="visitTextBox">
-                    <h2>The Grand Deluxe Room</h2>
+                    <h2 class="cardTitle">The Grand Deluxe Room</h2>
+                    <div class="cardSubtext">
                     <p>Descrption paragraph to come</p>
                     <Link to={{
                         pathname: "/booking", 
                         state: { room_type: "Grand Deluxe Room" }}}>
                         Book Now
                     </Link>
+                    </div>
                 </div>
                 <img class="visitImage" src="https://nuvomagazine.scdn2.secure.raxcdn.com/wp-content/uploads/2014/12/St_Regis_NY-Grand-Luxe-Guestroom-01.jpg"/>
             </div>
             <div class="roomCard">
                 <div class="visitTextBox">
-                    <h2>The Executive Room</h2>
+                    <h2 class="cardTitle">The Executive Room</h2>
                     <p>Descrption paragraph to come</p>
                     <Link to={{
                         pathname: "/booking", 
@@ -49,7 +53,7 @@ function Visits({ user }){
             </div>
             <div class="roomCard">
                 <div class="visitTextBox">
-                    <h2>The Superior Room</h2>
+                    <h2 class="cardTitle">The Superior Room</h2>
                     <p>Descrption paragraph to come</p>
                     <Link to={{
                         pathname: "/booking", 
@@ -61,7 +65,7 @@ function Visits({ user }){
             </div>
             <div class="roomCard">
                 <div class="visitTextBox">
-                    <h2>The Archduchess Elizabeth Suite</h2>
+                    <h2 class="cardTitle">The Archduchess Elizabeth Suite</h2>
                     <p>Descrption paragraph to come</p>
                     <Link to={{
                         pathname: "/booking", 
