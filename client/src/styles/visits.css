@@ -5,6 +5,7 @@
     /* flex-direction: row; */
     justify-content: center;
     margin-right: none;
+    box-shadow: 12px 29px 81px 0px #75638b;
 }
 
 .roomCard:hover {
@@ -17,9 +18,10 @@
     float: right;
     width: 45%;
     height: 45%;
-    margin-left: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 
-    box-shadow: 0px .05vw #9b5580;
+    box-shadow: .3vw .3vw #9b5580;
 }
 
 .roomCard p{

@@ -9,7 +9,6 @@ function Visits({ user }){
             <Nav user={user}/>
             <div>
                 <h1> Our Accomodations - </h1>
-                <p>Descrption paragraph to come</p>
             </div>
             <div class="roomCard">
                 <div>
