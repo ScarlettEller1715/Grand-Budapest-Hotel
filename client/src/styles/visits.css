@@ -1,0 +1,17 @@
+.roomCard {
+    background-color: rgb(235, 174, 188);
+    padding-bottom: 40%;
+    text-align: left;
+}
+
+.visitImage {
+    display: flex;
+    float: right;
+    width: 40%;
+    height: 40%;
+}
+
+.visitTextBox {
+    float: left;
+    text-align: center;
+}
