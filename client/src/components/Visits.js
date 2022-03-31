@@ -12,10 +12,10 @@ function Visits({ user }){
                 <p>Descrption paragraph to come</p>
             </div>
             <div class="roomCard">
-                <div class="visitTextBox">
-                    <h2 class="cardTitle">The Deluxe Room</h2>
+                <div>
+                    <h2>The Deluxe Room</h2>
                     <div class="cardSubtext">
-                    <p>Descrption paragraph to come</p>
+                        <p>Descrption paragraph to come</p>
                         <Link to={{
                             pathname: "/booking", 
                             state: { room_type: "Deluxe Room" }}}>
@@ -23,11 +23,11 @@ function Visits({ user }){
                         </Link>
                     </div>
                 </div>
-                <img class="visitImage" src="https://www.pendrayinnandteahouse.com/uploads/1/0/6/8/106825145/garden-suite-2_1_orig.jpg"/>
+                <img src="https://www.pendrayinnandteahouse.com/uploads/1/0/6/8/106825145/garden-suite-2_1_orig.jpg"/>
             </div>
             <div class="roomCard">
-                <div class="visitTextBox">
-                    <h2 class="cardTitle">The Grand Deluxe Room</h2>
+                <div>
+                    <h2>The Grand Deluxe Room</h2>
                     <div class="cardSubtext">
                     <p>Descrption paragraph to come</p>
                     <Link to={{
@@ -37,11 +37,11 @@ function Visits({ user }){
                     </Link>
                     </div>
                 </div>
-                <img class="visitImage" src="https://nuvomagazine.scdn2.secure.raxcdn.com/wp-content/uploads/2014/12/St_Regis_NY-Grand-Luxe-Guestroom-01.jpg"/>
+                <img src="https://nuvomagazine.scdn2.secure.raxcdn.com/wp-content/uploads/2014/12/St_Regis_NY-Grand-Luxe-Guestroom-01.jpg"/>
             </div>
             <div class="roomCard">
-                <div class="visitTextBox">
-                    <h2 class="cardTitle">The Executive Room</h2>
+                <div>
+                    <h2>The Executive Room</h2>
                     <p>Descrption paragraph to come</p>
                     <Link to={{
                         pathname: "/booking", 
@@ -49,11 +49,11 @@ function Visits({ user }){
                         Book Now
                     </Link>
                 </div>
-                <img class="visitImage" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/ritz-paris-suite-imperiale-xlarge.jpg" />
+                <img src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/france/paris/ritz-paris-suite-imperiale-xlarge.jpg" />
             </div>
             <div class="roomCard">
-                <div class="visitTextBox">
-                    <h2 class="cardTitle">The Superior Room</h2>
+                <div>
+                    <h2>The Superior Room</h2>
                     <p>Descrption paragraph to come</p>
                     <Link to={{
                         pathname: "/booking", 
@@ -61,11 +61,11 @@ function Visits({ user }){
                         Book Now
                     </Link>
                 </div>
-                <img class="visitImage" src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/ireland1/cong/ashford-castle-bedroom-state-ireland-xlarge.jpg"/>
+                <img src="https://www.telegraph.co.uk/content/dam/Travel/hotels/europe/ireland1/cong/ashford-castle-bedroom-state-ireland-xlarge.jpg"/>
             </div>
             <div class="roomCard">
-                <div class="visitTextBox">
-                    <h2 class="cardTitle">The Archduchess Elizabeth Suite</h2>
+                <div>
+                    <h2>The Archduchess Elizabeth Suite</h2>
                     <p>Descrption paragraph to come</p>
                     <Link to={{
                         pathname: "/booking", 
@@ -73,7 +73,7 @@ function Visits({ user }){
                         Book Now
                     </Link>
                 </div>
-                <img class="visitImage" src="https://insonduboiswood.com/wp-content/uploads/2018/08/MAIN-CHATEAU-SALON-DE-COMPAGNIE-1920x1200.jpg" />
+                <img src="https://insonduboiswood.com/wp-content/uploads/2018/08/MAIN-CHATEAU-SALON-DE-COMPAGNIE-1920x1200.jpg" />
             </div>
         </React.Fragment>
     ); 
