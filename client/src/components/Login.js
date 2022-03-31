@@ -5,7 +5,7 @@ import { useHistory } from "react-router-dom";
 
 
 
-function Login({ setUser }){
+function Login({ setUser, setUserVisits }){
     
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
@@ -24,6 +24,7 @@ function Login({ setUser }){
             if (r.ok) {
                 r.json().then((user) => {
                     setUser(user)
+                    setUserVisits(user.visits)
                     history.push("/visits")
                 });
             } else {
@@ -60,7 +61,7 @@ function Login({ setUser }){
                     />
             </formfield>
             <formfield>
-                <button type="submit">Login</button>
+                <button type="submit" onClick={handleSubmit}>Login</button>
             </formfield>
         </form>
         </div>
