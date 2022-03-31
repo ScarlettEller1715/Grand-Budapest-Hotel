@@ -35,9 +35,15 @@
 .roomCard a{
     color:white;
     font-size: 2vw;
-    background-color: purple;
     text-decoration: none;
 }
+.roomCard a:hover {
+    color: rgb(221, 214, 144);
+
+    text-decoration: underline;
+    transition: all, .1s;
+}
+
 
 .cardSubtext {
     display: flex;
