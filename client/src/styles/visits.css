@@ -36,6 +36,8 @@
 .roomCard p{
     float: left;
     font-size: 1.5vw;
+    color: white;
+    margin-left: 4%;
 }
 
 .roomCard h2{
@@ -50,6 +52,7 @@
     color:white;
     font-size: 2vw;
     text-decoration: none;
+    margin-left: 4%;
 }
 .roomCard a:hover {
     color: #9b5580;
