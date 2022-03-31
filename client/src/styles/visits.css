@@ -1,16 +1,22 @@
 .roomCard {
     display: flex;
-    background-color: rgb(235, 174, 188);
-    padding-bottom: 10%;
+    padding-bottom: 5%;
+    padding-top: 5%;
     /* flex-direction: row; */
-    justify-content: right;
+    justify-content: center;
+    margin-right: none;
+}
+
+.roomCard:hover {
+    background-color: rgb(235, 174, 188);
+    transition: all, .3s;
 }
 
 .roomCard img{
     display: flex;
     float: right;
-    width: 40%;
-    height: 40%;
+    width: 45%;
+    height: 45%;
     padding-left: 10%;
 }
 
@@ -21,7 +27,6 @@
 
 .roomCard h2{
     font-size: 5vw;
-    display: flex;
     color: white;
     text-align: center;
     padding-bottom: 0%;
@@ -31,6 +36,7 @@
     color:white;
     font-size: 2vw;
     background-color: purple;
+    text-decoration: none;
 }
 
 .cardSubtext {
