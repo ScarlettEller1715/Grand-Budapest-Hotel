@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation, useHistory } from "react-router-dom"
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
+import "../styles/visitUpdate.css"
 
 function VisitUpdate({ updateVisit }) {
 
@@ -45,36 +46,38 @@ function VisitUpdate({ updateVisit }) {
     return (
         <form>
         <h1>Adjust your booking...</h1>
-        <select onChange={(e) => setRoom_Type(e.target.value)} defaultValue={visit.room.room_type} >
-            <option value="">Select Room Class</option>
-            <option value="Deluxe Room">Deluxe Room</option>
-            <option value="Grand Deluxe Room">Grand Deluxe Room</option>
-            <option value="Executive Room">Executive Room</option>
-            <option value="Superior Room">Superior Room</option>
-            <option value="Archduchess Elizabeth Suite">Archduchess Elizabeth Suite</option>
-        </select>
-        <Flatpickr
-        defaultValue={visit.check_in}
-        data-date-format="Y-m-d"
-        placeholder="Check-in"
-        options={{ minDate: "today",
-            altInput: true,
-            altFormat: "F j, Y",
-            dateFormat: "Y-m-d",
-            enableTime: true }}
-        onChange={(date) => setCheck_In(date[0])} />
-        <p>-</p>
-        <Flatpickr
-        defaultValue={visit.check_out} 
-        data-date-format="Y-m-d"
-        placeholder="Check-out"
-        options={{ minDate: "today",
-            altInput: true,
-            altFormat: "F j, Y",
-            dateFormat: "Y-m-d",
-            enableTime: true }}
-        onChange={(date) => setCheck_Out(date[0])} />
-        <button onClick={handleSubmit}>Adjust Booking</button>
+        <div id="adjustBookingContainer">
+            <select className="inputs" onChange={(e) => setRoom_Type(e.target.value)} defaultValue={visit.room.room_type} >
+                <option value="">Select Room Class</option>
+                <option value="Deluxe Room">Deluxe Room</option>
+                <option value="Grand Deluxe Room">Grand Deluxe Room</option>
+                <option value="Executive Room">Executive Room</option>
+                <option value="Superior Room">Superior Room</option>
+                <option value="Archduchess Elizabeth Suite">Archduchess Elizabeth Suite</option>
+            </select>
+            <Flatpickr class="calBookingButton"
+            defaultValue={visit.check_in}
+            data-date-format="Y-m-d"
+            placeholder="Check-in"
+            options={{ minDate: "today",
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+                enableTime: true }}
+            onChange={(date) => setCheck_In(date[0])} />
+            <p>—</p>
+            <Flatpickr class="calBookingButton"
+            defaultValue={visit.check_out} 
+            data-date-format="Y-m-d"
+            placeholder="Check-out"
+            options={{ minDate: "today",
+                altInput: true,
+                altFormat: "F j, Y",
+                dateFormat: "Y-m-d",
+                enableTime: true }}
+            onChange={(date) => setCheck_Out(date[0])} />
+            <button id="adjustButton" onClick={handleSubmit}>Adjust Booking</button>
+        </div>
     </form>
     )
 }
