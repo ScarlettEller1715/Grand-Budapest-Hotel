@@ -24,7 +24,7 @@ function Login({ setUser }){
             if (r.ok) {
                 r.json().then((user) => {
                     setUser(user)
-                    history.push("/account")
+                    history.push("/visits")
                 });
             } else {
                 r.json().then((error) => alert(error.errors));

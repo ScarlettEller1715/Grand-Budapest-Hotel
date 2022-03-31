@@ -4,10 +4,10 @@ import VisitInfo from "./VisitInfo";
 import { Link } from "react-router-dom";
 import "../styles/account.css";
 
-function Account({ user, setUser }){
+function Account({ user, setUser, userVisits, deleteVisit }){
 
-    const visits = user.visits.map((visit) => {
-        return <VisitInfo visit={visit} />
+    const visits = userVisits.map((visit) => {
+        return <VisitInfo visit={visit}  deleteVisit={deleteVisit}/>
         })
 
         function handleLogoutClick() {
@@ -22,9 +22,8 @@ function Account({ user, setUser }){
 
     return (
         <React.Fragment>
-                {/* <div className="accountContainer"> */}
                 <Link to="/">Home</Link>
-                <Nav/>
+                <Nav user={user}/>
                 <h1 id="accountHeader"> Welcome, {user.name} </h1>
 
                 <div className="overallInfo">
@@ -43,7 +42,6 @@ function Account({ user, setUser }){
                             {visits}
                     </div>
                 </div>
-            {/* </div>            */}
         </React.Fragment>
     ); 
 }

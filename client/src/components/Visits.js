@@ -2,10 +2,10 @@ import React from "react";
 import Nav from "./Nav"
 import { Link } from "react-router-dom";
 
-function Visits(){
+function Visits({ user }){
     return (
         <React.Fragment>
-            <Nav />
+            <Nav user={user}/>
             <div>
                 <h1> Our Accomodations - </h1>
                 <p>Descrption paragraph to come</p>
@@ -13,29 +13,48 @@ function Visits(){
             <div>
                 <h2>The Deluxe Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Deluxe Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Grand Deluxe Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Grand Deluxe Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Executive Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Executive Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Superior Room</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Superior Room" }}}>
+                    Book Now
+                </Link>
             </div>
             <div>
                 <h2>The Archduchess Elizabeth Suite</h2>
                 <p>Descrption paragraph to come</p>
-                <Link to="/booking">Book Now</Link>
+                <Link to={{
+                    pathname: "/booking", 
+                    state: { room_type: "Archduchess Elizabeth Suite" }}}>
+                    Book Now
+                </Link>
             </div>
-            <Link to="/">Home</Link>
         </React.Fragment>
     ); 
 }

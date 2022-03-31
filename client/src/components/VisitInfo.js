@@ -1,8 +1,8 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useHistory, Link } from "react-router-dom";
 
 
-function VisitInfo({ visit }) {
+function VisitInfo({ visit, deleteVisit }) {
     
     const checkIn = { time: visit.check_in }
     const checkOut = { time: visit.check_out }
@@ -13,14 +13,12 @@ function VisitInfo({ visit }) {
     function handleDelete() {
         fetch(`/cancellation/${visit.id}`, {
             method: "DELETE",
-        }).then((res) => {
-            console.log(res.json())
-            window.location.reload(true)
+        }).then(() => {
+            deleteVisit(visit.id)
             history.push('/account')
         })
     }
 
-    
     return (<div className="VisitInfo">
                 <h3>{new Date(checkIn.time).toLocaleDateString()}</h3>
                 <li>Check-In: {new Date(checkIn.time).toLocaleString()}</li>

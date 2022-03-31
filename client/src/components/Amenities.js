@@ -5,11 +5,11 @@ import "../styles/amenities.css";
 
 
 
-function Amenities () {
+function Amenities ({ user }) {
 
     return (
         <React.Fragment>
-                <Nav />
+                <Nav user={user}/>
 
                 <h1 id="amenitiesHeader">Our Amenities</h1>
 
@@ -64,9 +64,7 @@ function Amenities () {
                         <h2 className="amenitiesSubHeader">The Gustave H. Art Collection</h2>
                         <p>Stuff about palm court blah blah look at me tehe</p>
                     </div>
-
                 </div>
-
         </React.Fragment>
         
     )
