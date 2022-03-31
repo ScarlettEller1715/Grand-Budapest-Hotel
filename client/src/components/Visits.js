@@ -8,7 +8,7 @@ function Visits({ user }){
         <React.Fragment>
             <Nav user={user}/>
             <div>
-                <h1> Our Accomodations - </h1>
+                <h1 class="accomodations"> Our Accomodations - </h1>
             </div>
             <div class="roomCard">
                 <div>

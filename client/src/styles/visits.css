@@ -1,3 +1,8 @@
+.accomodations {
+    padding-bottom: 5%;
+}
+
+
 .roomCard {
     display: flex;
     padding-bottom: 5%;
@@ -18,8 +23,8 @@
     float: right;
     width: 45%;
     height: 45%;
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 6%;
+    margin-right: 3%;
 
     box-shadow: .3vw .3vw #9b5580;
 }
@@ -33,7 +38,8 @@
     font-size: 5vw;
     color: white;
     text-align: center;
-    padding-bottom: 0%;
+    margin-bottom: 0%;
+    margin-left: 4%;
 }
 
 .roomCard a{
