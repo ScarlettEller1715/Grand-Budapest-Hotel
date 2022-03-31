@@ -28,6 +28,10 @@
 
     box-shadow: .3vw .3vw #9b5580;
 }
+.roomCard img:hover{
+    transform: scale(1.1);
+    transition: all .3s;
+}
 
 .roomCard p{
     float: left;
