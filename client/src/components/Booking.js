@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router-dom";
 import Flatpickr from "react-flatpickr";
 import "flatpickr/dist/themes/material_green.css";
+import "../styles/booking.css";
 
 
 
@@ -45,7 +46,8 @@ function Booking({ addNewVisit }) {
     return (
         <form>
             <h1>Booking Page</h1>
-            <select onChange={(e) => setRoom_Type(e.target.value)} defaultValue={propsRoom}>
+            <div id="bookingContainer">
+            <select class="inputs" onChange={(e) => setRoom_Type(e.target.value)} defaultValue={propsRoom}>
                 <option value="">Select Room Class</option>
                 <option value="Deluxe Room">Deluxe Room</option>
                 <option value="Grand Deluxe Room">Grand Deluxe Room</option>
@@ -53,7 +55,7 @@ function Booking({ addNewVisit }) {
                 <option value="Superior Room">Superior Room</option>
                 <option value="Archduchess Elizabeth Suite">Archduchess Elizabeth Suite</option>
             </select>
-            <Flatpickr 
+            <Flatpickr class="inputs"
             data-date-format="Y-m-d"
             placeholder="Check-in"
             options={{ minDate: "today",
@@ -62,8 +64,8 @@ function Booking({ addNewVisit }) {
                 dateFormat: "Y-m-d",
                 enableTime: true }}
             onChange={(date) => setCheck_In(date[0])} />
-            <p>-</p>
-            <Flatpickr 
+            <hr id="lineBreak"></hr>
+            <Flatpickr class="inputs"
             data-date-format="Y-m-d"
             placeholder="Check-out"
             options={{ minDate: "today",
@@ -72,7 +74,8 @@ function Booking({ addNewVisit }) {
                 dateFormat: "Y-m-d",
                 enableTime: true }}
             onChange={(date) => setCheck_Out(date[0])} />
-            <button onClick={handleSubmit}>Book your trip!</button>
+            <button id="bookingButton" onClick={handleSubmit}>Book your trip!</button>
+            </div>
         </form>
     );
 }
