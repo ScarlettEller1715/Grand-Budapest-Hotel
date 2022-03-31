@@ -4,7 +4,7 @@
 }
 
 
-.AmenitiesCard:nth-child(odd){
+.AmenitiesCard:nth-child(even){
     display: flex;
     flex-direction: row-reverse;
 }
