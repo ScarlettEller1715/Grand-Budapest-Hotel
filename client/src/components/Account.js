@@ -22,7 +22,6 @@ function Account({ user, setUser, userVisits, deleteVisit }){
 
     return (
         <React.Fragment>
-                <Link to="/">Home</Link>
                 <Nav user={user}/>
                 <h1 id="accountHeader"> Welcome, {user.name} </h1>
 
