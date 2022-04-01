@@ -42,8 +42,8 @@ function Login({ setUser, setUserVisits }){
             <h1> Login Here </h1>
         <form id="form" onSubmit={handleSubmit}>
             <formfield>
-                <label htmlFor="username">Username</label>
-                <input 
+                <label className="loginFormLabels" htmlFor="username">Username</label>
+                <input className="loginFormInputs"
                 type="text" 
                 id="username"
                 autoComplete="off"
@@ -52,8 +52,8 @@ function Login({ setUser, setUserVisits }){
                 />
             </formfield>
             <formfield>
-                <label htmlFor="password">Password</label>
-                <input
+                <label className="loginFormLabels" htmlFor="password">Password</label>
+                <input className="loginFormInputs"
                     type="password"
                     id="password"
                     autoComplete="off"
@@ -62,13 +62,13 @@ function Login({ setUser, setUserVisits }){
                     />
             </formfield>
             <formfield>
-                <button type="submit" onClick={handleSubmit}>Login</button>
+                <button className="loginPageButtons" type="submit" onClick={handleSubmit}>Login</button>
             </formfield>
         </form>
         </div>
         <div id="otherContent">
-            <h3>Never stayed with us before?</h3>
-            <Link id="linktoCreation" to="/accountcreation">Create a Guest Account</Link>
+            <h3 id="neverStayHeader">Never stayed with us before?</h3>
+            <Link className="loginPageButtons" to="/accountcreation">Create a Guest Account</Link>
         </div>
         </React.Fragment>
     ); 
