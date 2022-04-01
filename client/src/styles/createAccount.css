@@ -43,3 +43,10 @@
     border-radius: 10px; 
     background-color: #ab7ae7;
 }
+
+.createAccountButton{
+    border-radius: 10px;
+    background-color:rgb(253, 230, 239);
+    color: rgb(177, 108, 124);
+    border: 1px;
+}
