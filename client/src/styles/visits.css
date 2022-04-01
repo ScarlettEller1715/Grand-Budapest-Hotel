@@ -52,10 +52,15 @@
     font-size: 2vw;
     text-decoration: none;
     margin-left: 4%;
+    text-decoration: underline;
 }
 .roomCard a:hover {
     color: #9b5580;
     text-decoration: underline;
+    font-weight: bold;
+    text-decoration: none;
+    transform: scale(1.1);
+    transition: all .1s;
 }
 
 

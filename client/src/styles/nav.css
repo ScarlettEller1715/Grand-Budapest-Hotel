@@ -19,5 +19,6 @@
 }
 .Link:hover {
     transform: scale(1.2);
-    transition: all .3s;
+    transition: all .1s;
+    font-weight: bold;
 }
