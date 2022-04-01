@@ -19,15 +19,16 @@ function VisitInfo({ visit, deleteVisit }) {
         })
     }
 
-    return (<div className="VisitInfo">
-                <h3>{new Date(checkIn.time).toLocaleDateString()}</h3>
+    return (
+            <div className="VisitInfo">
+                <h3>Your Upcoming Visit:</h3>
                 <li>Check-In: {new Date(checkIn.time).toLocaleString()}</li>
                 <li>Check-Out: {new Date(checkOut.time).toLocaleString()}</li>
 
                 <h3>{visit.room.room_type}</h3>
                 <li>Room number: {visit.room.number}</li>
                 <li>Price per night: {visit.room.price}</li>
-                <button onClick={handleDelete}>Cancel this Booking</button>
+                <button id="cancelBookingButton" onClick={handleDelete}>Cancel this Booking</button>
                 <Link  className="updateBookingButton" to={{
                     pathname: "/bookingupdate", 
                     state: { visit: visit }

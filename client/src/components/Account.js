@@ -34,9 +34,6 @@ function Account({ user, setUser, userVisits, deleteVisit }){
                         <button id="accountButton" onClick={handleLogoutClick}>Logout</button>
                     </div>
                     <div className="VisitContainer">
-                        <div className="VisitInfo">
-                            <h3 id="visitTitle">Your Upcoming Visit:</h3>
-                        </div>
                         {visits}
                     </div>
                 </div>
