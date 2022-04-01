@@ -23,7 +23,6 @@ function Account({ user, setUser, userVisits, deleteVisit }){
         <React.Fragment>
                 <Nav user={user}/>
                 <h1 id="accountHeader"> Welcome, {user.name} </h1>
-
                 <div className="overallInfo">
                     <div className="CustomerInfo">
                         <h3>Guest Information:</h3>
