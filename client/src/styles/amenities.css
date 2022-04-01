@@ -17,15 +17,27 @@
     border-image: url(../images/frame.png) 50 stretch;
     filter: drop-shadow(0 0 1.5rem #a086c0);
 }
+.AmenitiesCard img:hover{
+    transform: scale(1.1);
+    transition: all .3s;
+}
 
-.AmenitiesCard p{
+.titleP {
     padding: 1%;
     font-size: 9vh;
-    font-size: 8vh;
     align-items: flex-end;
     color: #dac291;
     font-weight: 100;
 }
+
+.AmenitiesCard p{
+    padding: 1%;
+    font-size: 5vh;
+    align-items: flex-end;
+    color: #dac291;
+    font-weight: 100;
+}
+
 
 .amenitiesSubHeader{
     text-align: center;
@@ -37,7 +49,6 @@
 .amenitiesInfoCard{
     display: flex;
     flex-direction: column;
-    border: 1px solid rgba(255, 255, 255, 0.808);
     justify-content: center;
     padding: 30px; 
 }

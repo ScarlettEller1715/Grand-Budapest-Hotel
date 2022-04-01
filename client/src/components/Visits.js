@@ -70,7 +70,7 @@ function Visits({ user }){
                 <div>
                     <h2>The Archduchess Elizabeth Suite</h2>
                     <div class="cardSubtext">
-                        <p>A truly opulent choice for the only our most distinguished guests, this charming suite features a lavish bathroom, living room filled with art treasures, and our best views of the Alpine Sudetenwaltz. The best Zubrowka has to offer.</p>
+                        <p>A truly opulent selection for only our most distinguished guests, this charming suite features a lavish bathroom, living room filled with art treasures, and awe-inspiring views of the Alpine Sudetenwaltz. The best Zubrowka has to offer.</p>
                         <Link to={{
                             pathname: "/booking", 
                             state: { room_type: "Archduchess Elizabeth Suite" }}}>

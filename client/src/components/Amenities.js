@@ -15,7 +15,7 @@ function Amenities ({ user }) {
 
                 <div class="AmenitiesCard">
                     <img src="http://4.bp.blogspot.com/-yyMgdDGVvPw/U19D7wmieZI/AAAAAAAAIfs/GNiyWbSzNi8/s1600/GrandBudapest.jpg"/>
-                    <p>The Grand Budapest offers nothing less than the epitome of luxury and service to our guests.</p>
+                    <h2 class="titleP">The Grand Budapest offers nothing less than the epitome of luxury and service to our guests.</h2>
                 </div>
 
                 <div class="AmenitiesCard">
@@ -33,7 +33,7 @@ function Amenities ({ user }) {
                     
                     <div class="amenitiesInfoCard">
                         <h2 className="amenitiesSubHeader">The Arabian Baths</h2>
-                        <p>Relaxing and discrete, the Arabian baths superior comfort in decadent surroundings.</p>
+                        <p>Relaxing and discrete, the Arabian baths provide superior comfort in decadent surroundings.</p>
                     </div>
 
                 </div>
@@ -53,7 +53,7 @@ function Amenities ({ user }) {
 
                     <div class="amenitiesInfoCard">
                         <h2 className="amenitiesSubHeader">Mendl's Luxury Pastries</h2>
-                        <p>Stuff about palm court blah blah look at me tehe</p>
+                        <p>A Zubrowkan institution, our local Mendl's bakery creates exquisite, one of a kind desserts from scratch.</p>
                     </div>
                 </div>
 
@@ -62,7 +62,7 @@ function Amenities ({ user }) {
 
                     <div class="amenitiesInfoCard">
                         <h2 className="amenitiesSubHeader">The Gustave H. Art Collection</h2>
-                        <p>Stuff about palm court blah blah look at me tehe</p>
+                        <p>All that remains of the esteemed Schloss Lutz private collection, our galleries are the only place on earth to view the Rennaisance masterpiece, "Boy with Apple."</p>
                     </div>
                 </div>
         </React.Fragment>
