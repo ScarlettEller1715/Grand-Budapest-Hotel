@@ -26,7 +26,6 @@ p{
     align-items: center;
     border: 2px solid rgb(218, 194, 204);
     border-radius: 30px;
-    /* background-color: rgb(232, 208, 217); */
     color: rgb(255, 255, 255);
     margin: 20px;
 }
@@ -42,7 +41,7 @@ p{
 
 .VisitInfo{
     font-size: 25px;
-    padding: 50px; 
+    padding: 20px; 
 }
 
 #visitTitle{
@@ -52,16 +51,33 @@ p{
 }
 
 #accountButton{
-    background-color: white;
+    background-color:rgb(253, 230, 239);
+    color: rgb(177, 108, 124); 
     border-radius: 20px;
+    border: 1px;
+    padding: 5px 8px;
 }
 
 .updateBookingButton{
     text-decoration: none;
-    background-color: rgba(255, 255, 255, 0.856);
+    background-color:rgb(253, 230, 239);
+    color: rgb(177, 108, 124); 
     border-radius: 10px;
-    font-size: 15px;
+    font-size: 14px;
     padding: 5px;
+}
+
+#cancelBookingButton{
+    background-color:rgb(253, 230, 239);
+    color: rgb(177, 108, 124); 
+    padding: 6px; 
+    margin-right: 5px;
+    border-radius: 10px;
+    border: 1px;
+}
+
+a:visited {
+    color: rgb(177, 108, 124); 
 }
 
 
