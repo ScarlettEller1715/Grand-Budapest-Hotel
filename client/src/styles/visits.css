@@ -2,7 +2,6 @@
     display: flex;
     padding-bottom: 5%;
     padding-top: 5%;
-    /* flex-direction: row; */
     justify-content: center;
     margin-right: none;
 }

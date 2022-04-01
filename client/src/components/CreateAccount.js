@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "../styles/createAccount.css";
 
 function CreateAccount({ setUser }) {
     const [username, setUsername] = useState("");
@@ -38,7 +39,10 @@ function CreateAccount({ setUser }) {
     
     return (
         <React.Fragment>
-            <form onSubmit={handleSubmit}>
+            <h1 id="accountHeader">Create An Account</h1>
+            <form id="form" onSubmit={handleSubmit}>
+
+                <div className="personalInfo">
                 <input placeholder="Full Name"
                 type="text"
                 id="name"
@@ -60,6 +64,9 @@ function CreateAccount({ setUser }) {
                     <option value="F">F</option>
                     <option value="X">X</option>
                 </select>
+                </div>
+
+                <div className="loginInfo">
                 <input placeholder="Username"
                 type="text"
                 id="username"
@@ -81,7 +88,8 @@ function CreateAccount({ setUser }) {
                 value={passwordConfirmation}
                 onChange={(e) => setPasswordConfirmation(e.target.value)}
                 />
-                <button onClick={handleSubmit}>Create an Account</button>
+                <button className="createAccountButton" onClick={handleSubmit}>Create an Account</button>
+                </div>
             </form>
 
         </React.Fragment>

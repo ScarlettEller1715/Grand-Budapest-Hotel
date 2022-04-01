@@ -1,0 +1,18 @@
+#form{
+    display: flex;
+}
+
+#otherContent{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   
+}
+
+.linktoCreation{
+    background-color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 2px;
+}

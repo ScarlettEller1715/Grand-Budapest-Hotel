@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import CreateAccount from "./CreateAccount";
 import { useHistory } from "react-router-dom";
+import "../styles/login.css";
+
 
 
 
@@ -35,10 +37,9 @@ function Login({ setUser }){
     return(
 
         <React.Fragment>
-            <Link to="/">Home</Link>
         <div>
-            <p> Login Here </p>
-        <form onSubmit={handleSubmit}>
+            <h1> Login Here </h1>
+        <form id="form" onSubmit={handleSubmit}>
             <formfield>
                 <label htmlFor="username">Username</label>
                 <input 
@@ -64,9 +65,9 @@ function Login({ setUser }){
             </formfield>
         </form>
         </div>
-        <div>
+        <div id="otherContent">
             <h3>Never stayed with us before?</h3>
-            <Link to="/accountcreation">Create a Guest Account</Link>
+            <Link id="linktoCreation" to="/accountcreation">Create a Guest Account</Link>
         </div>
         </React.Fragment>
     ); 

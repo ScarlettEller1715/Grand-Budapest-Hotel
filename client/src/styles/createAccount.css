@@ -1,0 +1,45 @@
+#form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    background-color: rgba(255, 255, 255, 0.753);
+    border: 2px solid #a58cc4;
+    border-radius: 10px;
+
+    margin: 0 100px;
+}
+
+.personalInfo{
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+}
+
+.loginInfo{
+    margin: 20px;
+    padding: 5px;
+    display: flex;
+}
+
+.loginInfo input{
+    margin: 4px;
+    padding: 3px;
+    display: flex;
+    border-radius: 10px; 
+    border: 1px solid;
+}
+
+.personalInfo input{
+    margin: 4px;
+    padding: 2px;
+    display: flex;
+
+    border-radius: 10px; 
+    border: 1px solid;
+}
+
+.createAccountButton{
+    border-radius: 10px; 
+    background-color: #ab7ae7;
+}

@@ -1,7 +1,6 @@
 import React from "react";
 import Nav from "./Nav"; 
 import VisitInfo from "./VisitInfo";
-import { Link } from "react-router-dom";
 import "../styles/account.css";
 
 function Account({ user, setUser, userVisits, deleteVisit }){
@@ -32,13 +31,13 @@ function Account({ user, setUser, userVisits, deleteVisit }){
                         <p>Gender: {user.gender}</p>
                         <p>Profession: {user.profession}</p>
                         <p>Username: {user.username}</p>
-                        <button onClick={handleLogoutClick}>Logout</button>
+                        <button id="accountButton" onClick={handleLogoutClick}>Logout</button>
                     </div>
                     <div className="VisitContainer">
                         <div className="VisitInfo">
                             <h3 id="visitTitle">Your Upcoming Visit:</h3>
                         </div>
-                            {visits}
+                        {visits}
                     </div>
                 </div>
         </React.Fragment>
