@@ -10,11 +10,28 @@
    
 }
 
-.linktoCreation{
-    background-color: white;
+.loginPageButtons{
+    background-color:rgb(253, 230, 239);
+    color: rgb(177, 108, 124); 
     text-decoration: none;
     border-radius: 10px;
+    padding: 6px;
+    border: 2px;
+}
+
+.loginFormLabels{
     padding: 2px;
+    color: rgb(58, 52, 53); 
+}
+
+.loginFormInputs{
+    border-radius: 5px;
+    border: 3px;
+}
+
+#neverStayHeader{
+    color: white; 
+    font-weight: 200;
 }
 
 form formfield{
