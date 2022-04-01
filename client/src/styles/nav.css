@@ -13,7 +13,11 @@
     text-decoration: none;
    
     font-size: 3vh;
-    padding-left: 2%;
+    padding-left: 5%;
     margin: 1%;
     color: rgb(177, 108, 124); 
+}
+.Link:hover {
+    transform: scale(1.2);
+    transition: all .3s;
 }

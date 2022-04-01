@@ -28,7 +28,7 @@ function Visits({ user }){
                 <div>
                     <h2>The Grand Deluxe Room</h2>
                     <div class="cardSubtext">
-                        <p>Embrace the Sudetenwaltz in it's purest mountain style. Featuring beautiful forest views and a charming interior, the Grand Deluxe rooms are a welcome retreat for any occaison.</p>
+                        <p>Embrace the Sudetenwaltz in it's purest mountain style. Featuring beautiful forest views and a charming interior, the Grand Deluxe rooms are a welcome retreat for any occasion.</p>
                         <Link to={{
                             pathname: "/booking", 
                             state: { room_type: "Grand Deluxe Room" }}}>

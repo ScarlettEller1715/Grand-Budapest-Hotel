@@ -72,7 +72,8 @@ function Booking({ addNewVisit }) {
                 altInput: true,
                 altFormat: "F j, Y",
                 dateFormat: "Y-m-d",
-                enableTime: true }}
+                enableTime: true
+                }}
             onChange={(date) => setCheck_Out(date[0])} />
             <button id="bookingButton" onClick={handleSubmit}>Book your trip!</button>
             </div>

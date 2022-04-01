@@ -23,7 +23,7 @@ function Amenities ({ user }) {
 
                     <div class="amenitiesInfoCard">
                         <h2 className="amenitiesSubHeader">The Palm Court</h2>
-                        <p>Stuff about palm court blah blah look at me tehe</p>
+                        <p>Featuring exotic plants from around the world, the Palm Court cafe offers permiere international tea and coffee.</p>
                     </div>
 
                 </div>
@@ -33,7 +33,7 @@ function Amenities ({ user }) {
                     
                     <div class="amenitiesInfoCard">
                         <h2 className="amenitiesSubHeader">The Arabian Baths</h2>
-                        <p>Stuff about palm court blah blah look at me tehe</p>
+                        <p>Relaxing and discrete, the Arabian baths superior comfort in decadent surroundings.</p>
                     </div>
 
                 </div>
@@ -43,7 +43,7 @@ function Amenities ({ user }) {
 
                     <div class="amenitiesInfoCard">
                         <h2 className="amenitiesSubHeader">The Colonnade Funicular</h2>
-                        <p>Stuff about palm court blah blah look at me tehe</p>
+                        <p>Installed in 1923, this unique transportation system remains a beloved way to reach the Grand Budapest.</p>
                     </div>
 
                 </div>
