@@ -73,7 +73,7 @@ function App() {
                     {user ? <Account user={user} 
                                      setUser={setUser} 
                                      userVisits={userVisits}
-                                     deleteVisit={deleteVisit}/> : <Login setUser={setUser}/>}
+                                     deleteVisit={deleteVisit}/> : <Login setUser={setUser} setUserVisits={setUserVisits}/>}
                 </Route>
 
                 <Route exact path="/">
@@ -81,11 +81,14 @@ function App() {
                 </Route>
 
                 <Route path="/booking">
-                  {user ? <Booking addNewVisit={addNewVisit}/> : <Login setUser={setUser}/>}
+                  {user ? <Booking addNewVisit={addNewVisit}/> : <Login setUser={setUser} setUserVisits={setUserVisits}/>}
                 </Route>
 
                 <Route path="/login">
-                  {user ? <Account user={user} setUser={setUser} /> : <Login setUser={setUser}/>}
+                  {user ? <Account user={user} 
+                                   setUser={setUser} 
+                                   userVisits={userVisits}
+                                   deleteVisit={deleteVisit}/> : <Login setUser={setUser} setUserVisits={setUserVisits}/>}
                 </Route>
 
                 <Route path="/accountcreation">

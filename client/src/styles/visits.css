@@ -1,3 +1,8 @@
+.accomodations {
+    padding-bottom: 5%;
+}
+
+
 .roomCard {
     display: flex;
     padding-bottom: 5%;
@@ -5,6 +10,7 @@
     /* flex-direction: row; */
     justify-content: center;
     margin-right: none;
+    box-shadow: 12px 29px 81px 0px #75638b;
 }
 
 .roomCard:hover {
@@ -17,27 +23,42 @@
     float: right;
     width: 45%;
     height: 45%;
-    padding-left: 10%;
+    margin-left: 6%;
+    margin-right: 3%;
+
+    box-shadow: .3vw .3vw #9b5580;
+}
+.roomCard img:hover{
+    transform: scale(1.1);
+    transition: all .3s;
 }
 
 .roomCard p{
     float: left;
     font-size: 1.5vw;
+    color: white;
+    margin-left: 4%;
 }
 
 .roomCard h2{
     font-size: 5vw;
     color: white;
     text-align: center;
-    padding-bottom: 0%;
+    margin-bottom: 0%;
+    margin-left: 4%;
 }
 
 .roomCard a{
     color:white;
     font-size: 2vw;
-    background-color: purple;
     text-decoration: none;
+    margin-left: 4%;
 }
+.roomCard a:hover {
+    color: #9b5580;
+    text-decoration: underline;
+}
+
 
 .cardSubtext {
     display: flex;

@@ -8,14 +8,13 @@ function Visits({ user }){
         <React.Fragment>
             <Nav user={user}/>
             <div>
-                <h1> Our Accomodations - </h1>
-                <p>Descrption paragraph to come</p>
+                <h1 class="accomodations"> Our Accomodations - </h1>
             </div>
             <div class="roomCard">
                 <div>
                     <h2>The Deluxe Room</h2>
                     <div class="cardSubtext">
-                        <p>Descrption paragraph to come</p>
+                        <p>Quiet and cozy, our Deluxe rooms feature spacious living quarters and a luxurious bedroom, with quick access to our hotel amenities.</p>
                         <Link to={{
                             pathname: "/booking", 
                             state: { room_type: "Deluxe Room" }}}>
@@ -29,7 +28,7 @@ function Visits({ user }){
                 <div>
                     <h2>The Grand Deluxe Room</h2>
                     <div class="cardSubtext">
-                        <p>Descrption paragraph to come</p>
+                        <p>Embrace the Sudetenwaltz in it's purest mountain style. Featuring beautiful forest views and a charming interior, the Grand Deluxe rooms are a welcome retreat for any occaison.</p>
                         <Link to={{
                             pathname: "/booking", 
                             state: { room_type: "Grand Deluxe Room" }}}>
@@ -43,7 +42,7 @@ function Visits({ user }){
                 <div>
                     <h2>The Executive Room</h2>
                     <div class="cardSubtext">
-                    <p>Descrption paragraph to come</p>
+                    <p>Experience the Alpine Sudetenwaltz with classic Zubrowkan flair. Bathed in natural light, our luxurious Executive rooms come with exquisite bathrooms and a spacious balcony.</p>
                     <Link to={{
                         pathname: "/booking", 
                         state: { room_type: "Executive Room" }}}>
@@ -57,7 +56,7 @@ function Visits({ user }){
                 <div>
                     <h2>The Superior Room</h2>
                     <div class="cardSubtext">
-                        <p>Descrption paragraph to come</p>
+                        <p>Featuring marble fireplaces, elaborate mirrors and sumptuous bathrooms, the Superior room ensures an unforgettable stay in the height of luxury.</p>
                         <Link to={{
                             pathname: "/booking", 
                             state: { room_type: "Superior Room" }}}>
@@ -71,7 +70,7 @@ function Visits({ user }){
                 <div>
                     <h2>The Archduchess Elizabeth Suite</h2>
                     <div class="cardSubtext">
-                        <p>Descrption paragraph to come</p>
+                        <p>A truly opulent choice for the only our most distinguished guests, this charming suite features a lavish bathroom, living room filled with art treasures, and our best views of the Alpine Sudetenwaltz. The best Zubrowka has to offer.</p>
                         <Link to={{
                             pathname: "/booking", 
                             state: { room_type: "Archduchess Elizabeth Suite" }}}>
