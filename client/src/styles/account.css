@@ -34,7 +34,6 @@ p{
 .VisitContainer{
     border: 2px solid rgb(221, 193, 204);
     border-radius: 30px;
-    background-color: rgb(231, 173, 187);
     color: rgb(255, 255, 255);
     display: flex;
     flex-direction: row;
@@ -49,7 +48,20 @@ p{
 #visitTitle{
     font-size: 5vh; 
     margin: 0px;
-    color: rgb(182, 145, 158);
+    color: white;
+}
+
+#accountButton{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.updateBookingButton{
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.856);
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 5px;
 }
 
 

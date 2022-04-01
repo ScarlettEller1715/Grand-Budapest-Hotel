@@ -28,7 +28,7 @@ function VisitInfo({ visit, deleteVisit }) {
                 <li>Room number: {visit.room.number}</li>
                 <li>Price per night: {visit.room.price}</li>
                 <button onClick={handleDelete}>Cancel this Booking</button>
-                <Link to={{
+                <Link  className="updateBookingButton" to={{
                     pathname: "/bookingupdate", 
                     state: { visit: visit }
                 }}>Adjust this Booking</Link>

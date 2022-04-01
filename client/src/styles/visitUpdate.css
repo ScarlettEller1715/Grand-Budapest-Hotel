@@ -10,10 +10,11 @@
     align-items: center;
     justify-content: center;
 
-    background-color: #a58cc4;
+    background-color: rgba(255, 255, 255, 0.856);
     padding: 70px; 
     margin: 50px;
     border: 1px solid white;
+    border-radius: 20px;
 }
 
 .calBookingButton{
@@ -35,9 +36,11 @@
 }
 
 #adjustButton{
-    background-color: #ab7ae7; 
+    background-color: #caa9f1; 
     margin: 20px; 
     width: 20%;
     padding-left: 10px;
     padding-right: 10px;
+    border-radius: 10px;
 }
+
