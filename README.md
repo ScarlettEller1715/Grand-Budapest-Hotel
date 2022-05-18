@@ -1,4 +1,4 @@
-# Welcome to the Grand Budapest Hotel
+<h1 align="center">Welcome to the Grand Budapest</h1>
 
 <img src='GrandBudapest1.PNG' align="center">
 
