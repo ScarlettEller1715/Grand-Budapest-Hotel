@@ -1,5 +1,8 @@
 # Welcome to the Grand Budapest Hotel
 
+<img src='GrandBudapest1.png' width='700'>
+
+
 <p>This application is a simulated Fullstack website the Grand Budapest Hotel, from the movie which is it's namesake. It allows you to make an account with the hotel, schedule a visit for a specific time and date, be assigned a hotel room, and save this information to a PostgreSQL backend.</p>
 <p>Originally built as the Phase 4 project for the Flatiron School Software Engineering Bootcamp by Scarlett Eller and Alison Melendez.</p>
 
